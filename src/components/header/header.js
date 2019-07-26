@@ -18,7 +18,7 @@ const Header = () => {
 
   return (
     <header className={headerStyles.header}>
-      <Navbar bg="light" expand="lg">
+      <Navbar style={{ backgroundColor: 'white' }} expand="lg" fixed="top">
         <div className="container">
           <Navbar.Brand className="p-0">
             <Link to="/">

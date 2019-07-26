@@ -1,19 +1,25 @@
 import React from 'react'
-import { Link } from 'gatsby'
 
-import Layout from '../components/layout/layout'
+import Hero from '../components/hero/hero'
+import Footer from '../components/footer/footer'
+import HomePage from '../components/homePage/homePage'
+
+import Header from '../components/header/header'
 import Head from '../components/seo/head'
+
+import '@fortawesome/fontawesome-free/css/all.min.css'
+import 'bootstrap-css-only/css/bootstrap.min.css'
+import 'mdbreact/dist/css/mdb.css'
 
 const IndexPage = () => {
   return (
-    <Layout>
+    <div>
       <Head title="Home" />
-      <h1>Hello for Gatsby JS</h1>
-      <h2>Build Blazing Fast Websites!</h2>
-      <p>
-        Need a developer? <Link to="/contact">Contact me.</Link>
-      </p>
-    </Layout>
+      <Header />
+      <Hero />
+      <HomePage />
+      <Footer />
+    </div>
   )
 }
 

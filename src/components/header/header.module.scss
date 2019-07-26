@@ -9,8 +9,21 @@
       font-size: 1.5rem;
     }
     a {
-      color: #232323;
+      color: #000000;
       text-decoration: none;
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: 400;
+      padding: 0 14.5px;
     }
+    a:hover {
+      color: #c30707;
+    }
+  }
+
+  .dropdown-menu.show {
+    background-color: red !important;
+    border: none;
+    margin-top: 20px;
   }
 }
