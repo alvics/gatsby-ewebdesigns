@@ -10,7 +10,7 @@ module.exports = {
 
   // local data / ___graphql
   siteMetadata: {
-    title: 'Full-Stack Bootcamp',
+    title: 'eWebDesigns',
     author: 'Allen Pavic',
   },
 
@@ -20,8 +20,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `posts`,
-        path: `${__dirname}/src/posts/`,
+        name: `pages`,
+        path: `${__dirname}/src/pages/`,
       },
     },
     `gatsby-plugin-sharp`,

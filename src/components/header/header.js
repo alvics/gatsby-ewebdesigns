@@ -1,5 +1,7 @@
 import React from 'react'
 import { Link, graphql, useStaticQuery } from 'gatsby'
+import { Navbar, Nav, NavDropdown } from 'react-bootstrap'
+import Logo from '../../images/ewdlogo.png'
 
 import headerStyles from './header.module.scss'
 
@@ -16,60 +18,64 @@ const Header = () => {
 
   return (
     <header className={headerStyles.header}>
-      <h1>
-        <Link className={headerStyles.title} to="/">
-          {data.site.siteMetadata.title}
-        </Link>
-      </h1>
-      <nav>
-        <ul className={headerStyles.navList}>
-          <li>
-            <Link
-              className={headerStyles.navItem}
-              activeClassName={headerStyles.activeNavItem}
-              to="/"
-            >
-              Home
+      <Navbar bg="light" expand="lg">
+        <div className="container">
+          <Navbar.Brand className="p-0">
+            <Link to="/">
+              <img src={Logo} height="60" />
             </Link>
-          </li>
-          <li>
-            <Link
-              className={headerStyles.navItem}
-              activeClassName={headerStyles.activeNavItem}
-              to="/about"
-            >
-              About
-            </Link>
-          </li>
-          {/* <li>
-            <Link
-              className={headerStyles.navItem}
-              activeClassName={headerStyles.activeNavItem}
-              to="/blog"
-            >
-              Blog
-            </Link>
-          </li> */}
-          <li>
-            <Link
-              className={headerStyles.navItem}
-              activeClassName={headerStyles.activeNavItem}
-              to="/contentful-blog"
-            >
-              Contenful
-            </Link>
-          </li>
-          <li>
-            <Link
-              className={headerStyles.navItem}
-              activeClassName={headerStyles.activeNavItem}
-              to="/contact"
-            >
-              Contact
-            </Link>
-          </li>
-        </ul>
-      </nav>
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="ml-auto">
+              <Nav.Link href="#home">
+                <Link to="/">Home</Link>
+              </Nav.Link>
+
+              <NavDropdown title="Services" id="basic-nav-dropdown">
+                <NavDropdown.Item>
+                  <Link to="/services/web-design">Web Design</Link>
+                </NavDropdown.Item>
+                <NavDropdown.Item>
+                  <Link to="/services/ecommerce-websites">
+                    eCommerce Websites
+                  </Link>
+                </NavDropdown.Item>
+                <NavDropdown.Item>
+                  <Link to="/services/seo-websites">SEO Websites</Link>
+                </NavDropdown.Item>
+                <NavDropdown.Item>
+                  <Link to="/services/responsive-websites">
+                    Responsive Websites
+                  </Link>
+                </NavDropdown.Item>
+                <NavDropdown.Item>
+                  <Link to="/services/web-development">Web Development</Link>
+                </NavDropdown.Item>
+                <NavDropdown.Item>
+                  <Link to="/services/web-hosting">Web Hosting</Link>
+                </NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item>
+                  <Link to="/services/web-packages">Web Packages</Link>
+                </NavDropdown.Item>
+              </NavDropdown>
+              <Nav.Link>
+                <Link to="/designs">Designs</Link>
+              </Nav.Link>
+              <Nav.Link>
+                <Link to="/projects">Projects</Link>
+              </Nav.Link>
+              <Nav.Link>
+                <Link to="/pricing">Pricing</Link>
+              </Nav.Link>
+              <Nav.Link>
+                <Link to="/contact">Contact</Link>
+              </Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </div>
+      </Navbar>
     </header>
   )
 }
