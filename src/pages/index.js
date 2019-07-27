@@ -2,7 +2,7 @@ import React from 'react'
 
 import Hero from '../components/hero/hero'
 import Footer from '../components/footer/footer'
-import HomePage from '../components/homePage/homePage'
+import HomePageIcons from '../components/homePageIcons/homePageIcons'
 
 import Header from '../components/header/header'
 import Head from '../components/seo/head'
@@ -17,7 +17,7 @@ const IndexPage = () => {
       <Head title="Home" />
       <Header />
       <Hero />
-      <HomePage />
+      <HomePageIcons />
       <Footer />
     </div>
   )

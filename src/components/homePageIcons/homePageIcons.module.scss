@@ -1,0 +1,26 @@
+.myIcon {
+  font-size: 1em;
+  width: 2em;
+  height: 2em;
+  text-align: center;
+  line-height: 2em !important;
+  color: #fff;
+  border-radius: 1.5em;
+  background-color: red;
+  margin-right: 10px;
+}
+
+.span {
+  font-size: 14px;
+  text-align: center;
+  line-height: 16px;
+}
+
+@media (max-width: 767px) {
+  .span {
+    display: flex;
+    font-size: 10px;
+    line-height: 12px !important;
+    margin-top: 5px;
+  }
+}

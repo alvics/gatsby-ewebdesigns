@@ -1,7 +1,9 @@
+// * Injected in Footer *
+
 import React from 'react'
 import { Link } from 'gatsby'
 
-import MenuStyles from './menu.module.scss'
+// import MenuStyles from './menu.module.scss'
 
 const Menu = () => {
   return (

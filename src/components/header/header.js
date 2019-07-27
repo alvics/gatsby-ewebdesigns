@@ -18,7 +18,7 @@ const Header = () => {
 
   return (
     <header className={headerStyles.header}>
-      <Navbar style={{ backgroundColor: 'white' }} expand="lg" fixed="top">
+      <Navbar style={{ backgroundColor: 'white' }} expand="md" fixed="top">
         <div className="container">
           <Navbar.Brand className="p-0">
             <Link to="/">
@@ -27,16 +27,18 @@ const Header = () => {
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="ml-auto">
+            <Nav className="ml-auto d-flex flex-md-row">
               <Nav.Link href="#home">
                 <Link to="/">Home</Link>
               </Nav.Link>
 
               <NavDropdown title="Services" id="basic-nav-dropdown">
                 <NavDropdown.Item>
-                  <Link to="/services/web-design">Web Design</Link>
+                  <Link className="p-3" to="/services/web-design">
+                    Web Design
+                  </Link>
                 </NavDropdown.Item>
-                <NavDropdown.Item>
+                <NavDropdown.Item className="p-3">
                   <Link to="/services/ecommerce-websites">
                     eCommerce Websites
                   </Link>
