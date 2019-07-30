@@ -4,7 +4,7 @@ import { MDBJumbotron, MDBBtn, MDBCol, MDBCardTitle, MDBIcon } from 'mdbreact'
 
 const Hero = () => {
   return (
-    <div className="bgcolor" style={{ backgroundColor: 'green' }}>
+    <div>
       <MDBJumbotron style={{ padding: 0 }}>
         <MDBCol
           className="text-white text-center py-5 px-4 my-5"

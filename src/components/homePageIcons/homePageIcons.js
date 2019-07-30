@@ -1,6 +1,6 @@
 import React from 'react'
 // import { MDBContainer, MDBRow, MDBCol, MDBIcon } from 'mdbreact'
-import { MDBContainer, MDBIcon } from 'mdbreact'
+import { MDBIcon } from 'mdbreact'
 
 // import { Link } from 'gatsby'
 import HomePageScss from './homePageIcons.module.scss'

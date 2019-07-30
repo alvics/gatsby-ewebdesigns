@@ -34,32 +34,44 @@ const Header = () => {
 
               <NavDropdown title="Services" id="basic-nav-dropdown">
                 <NavDropdown.Item>
-                  <Link className="p-3" to="/services/web-design">
-                    Web Design
-                  </Link>
-                </NavDropdown.Item>
-                <NavDropdown.Item className="p-3">
-                  <Link to="/services/ecommerce-websites">
-                    eCommerce Websites
-                  </Link>
+                  <Nav.Link>
+                    <Link to="/services/web-design">Web Design</Link>
+                  </Nav.Link>
                 </NavDropdown.Item>
                 <NavDropdown.Item>
-                  <Link to="/services/seo-websites">SEO Websites</Link>
+                  <Nav.Link>
+                    <Link to="/services/ecommerce-websites">
+                      eCommerce Websites
+                    </Link>
+                  </Nav.Link>
                 </NavDropdown.Item>
                 <NavDropdown.Item>
-                  <Link to="/services/responsive-websites">
-                    Responsive Websites
-                  </Link>
+                  <Nav.Link>
+                    <Link to="/services/seo-websites">SEO Websites</Link>
+                  </Nav.Link>
                 </NavDropdown.Item>
                 <NavDropdown.Item>
-                  <Link to="/services/web-development">Web Development</Link>
+                  <Nav.Link>
+                    <Link to="/services/responsive-websites">
+                      Responsive Websites
+                    </Link>
+                  </Nav.Link>
                 </NavDropdown.Item>
                 <NavDropdown.Item>
-                  <Link to="/services/web-hosting">Web Hosting</Link>
+                  <Nav.Link>
+                    <Link to="/services/web-development">Web Development</Link>
+                  </Nav.Link>
+                </NavDropdown.Item>
+                <NavDropdown.Item>
+                  <Nav.Link>
+                    <Link to="/services/web-hosting">Web Hosting</Link>
+                  </Nav.Link>
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item>
-                  <Link to="/services/web-packages">Web Packages</Link>
+                  <Nav.Link>
+                    <Link to="/services/web-packages">Web Packages</Link>
+                  </Nav.Link>
                 </NavDropdown.Item>
               </NavDropdown>
               <Nav.Link>

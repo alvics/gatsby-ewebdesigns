@@ -9,37 +9,54 @@ Gives graphQL an addition 2 new queries
 npm install --save gatsby-source-filesystem
 ```
 
-Adding file path for query
+Adding file path for a query (file path for images folder)
 
 ```javascript
    {
-      resolve: `gatsby-source-filesystem`,
+       resolve: 'gatsby-source-filesystem',
       options: {
-        name: `posts`,
-        path: `${__dirname}/src/posts/`,
-      },
-    },
-```
-
-Playground DOCS view: allFile() => edges => node
-gatsby.config
-
-graphQL list all posts
+        path: `${__dirname}/src/images`,
+        name: `images`,
+   },
 
 ```
 
+```
 query {
-  allFile{
-      edges{
-        node{
-          name
-          extension
-          dir
-        }
+  allFile(filter: { sourceInstanceName: {eq: "images"} }) {
+    edges {
+      node {
+        relativePath
       }
+    }
   }
 }
 
+```
+
+import { useStaticQuery, graphql } from 'gatsby'
+
+import Img from 'gatsby-image'
+
+```javascript
+const data = useStaticQuery(graphql`
+  {
+    pexels: file(relativePath: { eq: "index/pexels.jpeg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1980) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`)
+console.log(data)
+const image = data.pexels
+```
+
+```javascript
+// use image
+<Img fluid={image.childImageSharp.fluid} />
 ```
 
 ### Parser for MD files
