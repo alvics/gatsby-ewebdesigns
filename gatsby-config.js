@@ -11,6 +11,8 @@ module.exports = {
   // local data / ___graphql
   siteMetadata: {
     title: 'eWebDesigns',
+    description:
+      'eWebDesigns are located at Biggera Waters on the Gold Coast. We develop beautiful, engaging websites in all industries. The Fastest websites available.',
     author: 'Allen Pavic',
   },
 
@@ -30,7 +32,8 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/src/images/`,
+        path: `${__dirname}/src/images/portfolio`,
         name: `images`,
       },
     },

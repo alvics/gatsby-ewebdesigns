@@ -22,7 +22,7 @@ const Header = () => {
         <div className="container">
           <Navbar.Brand className="p-0">
             <Link to="/">
-              <img src={Logo} height="60" />
+              <img src={Logo} height="60" alt={data.site.siteMe} />
             </Link>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />

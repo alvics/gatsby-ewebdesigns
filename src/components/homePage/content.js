@@ -1,28 +1,39 @@
 import React from 'react'
-import logo from '../../images/ewdlogo.png'
-import mobileImg from '../../images/index/450-content.png'
+// import logo from '../../images/ewdlogo.png'
+import contentImg from '../../images/index/450-content.png'
+import { useStaticQuery, graphql } from 'gatsby'
+import Img from 'gatsby-image'
 
 const Content = () => {
+  const data = useStaticQuery(graphql`
+    {
+      allFile(filter: { absolutePath: { regex: "/portfolio/" } }) {
+        edges {
+          node {
+            name
+            relativePath
+            childImageSharp {
+              fluid(maxWidth: 900) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
+      }
+    }
+  `)
+  console.log(data)
+
   return (
     <div className="container mb-5">
-      {/* <img src={logo} alt="logo" height="120" />
-      <h2 style={{ marginTop: '-30px', fontSize: '20px', fontWeight: 'bold' }}>
-        Mobile & Desktop Web Development
-      </h2> 
-      <p>
-        Home to Biggera Waters, Gold Coast Queensland. We develop beautiful,
-        engaging websites in all industries and work hard to deliver successful
-        SEO campaigns.
-      </p>*/}
-      <section>
+      <section style={{ marginTop: '100px' }}>
         <div className="row">
           <div className="col-md-6">
             <h3>Our Service</h3>
             <p>
-              eWebDesigns offers affordable website solution's for your business
-              here on the Gold Coast. We create modern, engaging bespoke
-              websites for Businesses, eCommerce, Tradies, Catalogues and
-              more...{' '}
+              eWebDesigns offers affordable digital solution's for business here
+              on the Gold Coast. We create modern, engaging bespoke websites for
+              Businesses, eCommerce, Tradies, Catalogues and more...
             </p>
             <p>
               Whether you are a bricks and mortar business wanting to start an
@@ -30,16 +41,31 @@ const Content = () => {
               web-store.
             </p>
             <p>
-              We are working with local businesses and start-ups to get online
-              at a more affordable cost and most importantly to achieve maximum
-              results. Contact us today and see how eWebDesigns can help you
-              redefine your brand and presents online.
+              We are working with local businesses and start-ups by build up
+              thier online presence to deliver maximum results.
+            </p>
+            <p>
+              Contact us today and see how eWebDesigns can help you redefine
+              your brand and presents online.
             </p>
           </div>
-
           <div className="col-md-6 mt-3">
-            <img src={mobileImg} alt="mobile" />
+            <img src={contentImg} alt="our service" />
           </div>
+        </div>
+      </section>
+      <section style={{ marginTop: '100px' }}>
+        <h3>Recent Work</h3>
+        <div className="row  mb-5">
+          {data.allFile.edges.map(item => (
+            <div className="col-md-4">
+              <Img
+                key={item.node.name}
+                fluid={item.node.childImageSharp.fluid}
+                style={{ height: '250px', width: 'auto' }}
+              />
+            </div>
+          ))}
         </div>
       </section>
     </div>
