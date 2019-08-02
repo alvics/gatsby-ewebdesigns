@@ -23,6 +23,18 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-styled-components`,
     {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `eWebDesigns Mobile & Desktop Web development`,
+        short_name: `eWebDesigns`,
+        start_url: `/`,
+        background_color: `#f7f0eb`,
+        theme_color: `#a2466c`,
+        display: `standalone`,
+        icon: `src/images/eweb_icon.png`,
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `pages`,
@@ -33,8 +45,21 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/src/images/`,
-        path: `${__dirname}/src/images/portfolio`,
+        path: `${__dirname}/src/images/portfolio/`,
         name: `images`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/src/images/tech/`,
+        name: `images`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/src/images/`,
       },
     },
     {
