@@ -4,7 +4,7 @@ import FooterStyles from './footer.module.scss'
 import Services from '../../components//services/services'
 import ContactForm from '../../components/forms/contactForm'
 import Menu from '../../components/menu/menu'
-
+import RedBanner from '../../components/redBanner/redBanner'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 
@@ -21,6 +21,7 @@ const Footer = () => {
 
   return (
     <footer className={FooterStyles.footer}>
+      <RedBanner />
       <div className="container">
         <Row>
           <Col md={4}>

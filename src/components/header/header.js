@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, graphql, useStaticQuery } from 'gatsby'
-import { Navbar, Nav, NavDropdown } from 'react-bootstrap'
+import { Navbar } from 'react-bootstrap'
 import Logo from '../../images/ewdlogo.png'
 
 import headerStyles from './header.module.scss'
@@ -25,7 +25,7 @@ const Header = () => {
               <img src={Logo} height="60" alt={data.site.siteMe} />
             </Link>
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          {/* <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ml-auto d-flex flex-md-row">
               <Nav.Link href="#home">
@@ -87,7 +87,7 @@ const Header = () => {
                 <Link to="/contact">Contact</Link>
               </Nav.Link>
             </Nav>
-          </Navbar.Collapse>
+          </Navbar.Collapse> */}
         </div>
       </Navbar>
     </header>

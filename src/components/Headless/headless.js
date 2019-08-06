@@ -5,7 +5,7 @@ import Img from 'gatsby-image'
 const Headless = () => {
   const data = useStaticQuery(graphql`
     {
-      file(relativePath: { eq: "index/JAM.png" }) {
+      file(relativePath: { eq: "index/jams.png" }) {
         childImageSharp {
           fluid(maxWidth: 300) {
             ...GatsbyImageSharpFluid
@@ -17,6 +17,14 @@ const Headless = () => {
 
   return (
     <div className="container p-4">
+      <span
+        className="font-weight-normal font-italic"
+        style={{ fontSize: '28px' }}
+      >
+        It's 2019, time for the
+      </span>
+      <br />
+      <br />
       <h3 className="font-weight-normal" style={{ fontSize: '2.5rem' }}>
         JAMStack
       </h3>
@@ -33,7 +41,6 @@ const Headless = () => {
         higher security, lower cost of scaling, and a better developer
         experience.
       </p>
-
       <div className="row">
         <div className="col-md-6">
           <Img

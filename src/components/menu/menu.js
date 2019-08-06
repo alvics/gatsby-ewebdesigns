@@ -9,20 +9,31 @@ const Menu = () => {
   return (
     <div>
       <ul className="list-unstyled">
+        <h4>Menu</h4>
         <li>
-          <Link to="/">Home</Link>
+          <Link to="/" style={{ color: '#333' }}>
+            Home
+          </Link>
         </li>
         <li>
-          <Link to="/contentful-blog">Blog</Link>
+          <Link to="/contentful-blog" style={{ color: '#333' }}>
+            Blog
+          </Link>
         </li>
         <li>
-          <Link to="/designs">Designs</Link>
+          <Link to="/designs" style={{ color: '#333' }}>
+            Designs
+          </Link>
         </li>
         <li>
-          <Link to="/projects">Projects</Link>
+          <Link to="/projects" style={{ color: '#333' }}>
+            Projects
+          </Link>
         </li>
         <li>
-          <Link to="/pricing">Pricing</Link>
+          <Link to="/pricing" style={{ color: '#333' }}>
+            Pricing
+          </Link>
         </li>
       </ul>
     </div>
