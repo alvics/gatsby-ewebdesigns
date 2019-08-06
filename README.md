@@ -1,3 +1,5 @@
+## Working progress
+
 ## Adding gatsby-source-filesystem (plugin)
 
 Gives graphQL an addition 2 new queries
