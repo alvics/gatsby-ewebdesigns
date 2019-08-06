@@ -5,6 +5,11 @@
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
 
+let env = process.env.NODE_ENV || 'development'
+
+// This adds dotenv (for storing environment variables) to gatsby
+require('dotenv').config({ path: `./.env.${env}` })
+
 module.exports = {
   /* Your site config here */
 
