@@ -23,7 +23,7 @@ const ContentfulBlogPage = () => {
   return (
     <Layout>
       <Head title="Blog" />
-      <h1 style={{ paddingTop: '80px' }}>The Contenful Blog</h1>
+      <h1 style={{ paddingTop: '120px' }}>The Contenful Blog</h1>
       <ol>
         {data.allContentfulBlogPost.edges.map(edge => {
           return (
