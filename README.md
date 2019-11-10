@@ -1,5 +1,5 @@
 ## Working progress
-### View demo [https://naughty-hawking-c829ad.netlify.com/] 
+### View [demo](https://naughty-hawking-c829ad.netlify.com/)
 ## Adding gatsby-source-filesystem (plugin)
 
 Gives graphQL an addition 2 new queries
