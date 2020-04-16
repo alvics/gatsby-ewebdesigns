@@ -1,4 +1,4 @@
-## Working progress
+## Playing around with Gatsby
 ### View [demo](https://naughty-hawking-c829ad.netlify.com/)
 ## Adding gatsby-source-filesystem (plugin)
 
